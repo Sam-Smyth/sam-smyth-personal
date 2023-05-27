@@ -95,6 +95,39 @@ get_header();
     <div class="projects-card first-project">
 
       <div class="projects-card-content">
+        <h3>Imagine Life Coaching</h3>
+
+        <h4 class="curtain-text">Development, Design, Project Management</h4>
+
+        <p class="curtain-text">Caterina Barregar is a relationship coach, empath coach and Reiki practitioner for Imagine Life Coaching.</p>
+
+        <p class="project-text-addition">I designed a comprehensive platform for Caterina, merging her Imagine Life Coaching services with her dedicated empath coaching site, The Empath Journey.</p>
+
+        <p class="project-text-addition">This intuitive and inviting website blends life coaching, empath coaching, and Reiki, offering users a seamless and enriching experience.</p>
+
+        <div class="project-btn">
+          <div>
+            <button class="button">View Project</button>
+          </div>
+
+          <div>
+            <a class="button website-link" href="https://imaginelifecoaching.ca" target="_blank">Visit Website</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="projects-card-video"></div>
+
+      <div class="project-colour-block"></div>
+
+      <img loading="lazy" src="<?php get_site_url() ?>wp-content/uploads/2023/05/imagine-life-coaching-website-image.jpg" alt="Imagine Life Coaching hero banner screenshot with leaves and text">
+
+    </div>
+
+    <div class="projects-card second-project">
+
+      <div class="projects-card-content">
         <h3>Eric Brunt Media</h3>
 
         <h4 class="curtain-text">Development, Design, Project Management</h4>
@@ -123,37 +156,6 @@ get_header();
 
       <img loading="lazy" src="<?php get_site_url() ?>wp-content/uploads/2022/05/Eric-Brunt-Media-website-image.jpg" alt="Eric Brunt Media website image with WWII veterans holding up their portraits">
 
-    </div>
-
-    <div class="projects-card second-project">
-
-      <div class="projects-card-content">
-        <h3>Staerk Hair</h3>
-
-        <h4 class="curtain-text">Development</h4>
-
-        <p class="curtain-text">Staerk Hair is a Victoria, BC-based salon specializing in bespoke colour and hair services.</p>
-
-        <p class="project-text-addition">I developed the website to show off Staerk's tantalizing hair creations by using a series of animations, sliding galleries and a custom, animating consultation request form. The website reflects the feel you get from a Staerk hair treatment; creative, bold and one of a kind.</p>
-
-
-        <div class="project-btn">
-          <div>
-            <button class="button">View Project</button>
-          </div>
-
-          <div>
-            <a class="button website-link" href="https://staerkhair.com" target="_blank">Visit Website</a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="projects-card-video"></div>
-
-      <div class="project-colour-block"></div>
-
-      <img loading="lazy" src="<?php get_site_url() ?>wp-content/uploads/2022/05/Staerk-Hair.jpg" alt="Staerk Hair website image showing woman with coloured hair">
 
     </div>
   </div>
@@ -212,7 +214,7 @@ get_header();
   </div>
 
   <div class="experience--description">
-    <p class="experience--description-body">I manage all updates for the Lighthouse website, subdomains and microsites. Working with our marketing team leads and internal development staff, I'm responsible for maintaining and improving our customer facing website content. 
+    <p class="experience--description-body">I manage all updates for the Lighthouse website, subdomains and microsites. Working with our marketing team leads and internal development staff, I'm responsible for maintaining and improving our customer facing website content.
     </p>
   </div>
 
