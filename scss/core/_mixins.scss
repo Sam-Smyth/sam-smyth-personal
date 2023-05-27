@@ -1,0 +1,43 @@
+// Breakpoints
+
+@mixin breakpoint($size) {
+  $desktop: "min-width: #{$width--tablet}";
+  $tablet: "max-width: #{$width--tablet - 1px}";
+  $phone: "max-width: #{$width--phone - 1px}";
+
+  @if $size == desktop {
+    @media only screen and (#{$desktop}) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media only screen and (#{$tablet}) {
+      @content;
+    }
+  } @else if $size == phone {
+    @media only screen and (#{$phone}) {
+      @content;
+    }
+  } @else {
+    @media only screen and (#{$size}) {
+      @content;
+    }
+  }
+}
+
+// Centering with position absolute
+
+@mixin absoluteCenter($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

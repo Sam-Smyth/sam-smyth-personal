@@ -1,0 +1,48 @@
+.gform_button.button,
+.button {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid $color--secondary;
+  font-size: $font-size--smaller !important;
+  color: $color--secondary;
+  outline: none;
+  padding: 16px 40px;
+  line-height: 1.6;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: .3s background-color, .3s color;
+
+  &:hover {
+    background-color: $color--secondary;
+    color: $color--white;
+  }
+
+  @include breakpoint("tablet") {
+    font-size: 1.6rem;
+  }
+}
+
+.button--alt {
+  border: 2px solid $color--secondary;
+  color: $color--secondary;
+  background-color: rgba(255,255,255,0);
+
+  @include breakpoint('tablet') {
+    .hero & {
+      color: $color--white;
+    }
+  }
+}
+
+.button--white-hover {
+  &:hover {
+    border-color: $color--white;
+    color: $color--secondary;
+    background-color: $color--white;
+  }
+}
+
+.button--cta {
+  min-width: 21.2rem;
+}

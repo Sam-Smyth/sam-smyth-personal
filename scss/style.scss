@@ -1,0 +1,30 @@
+/**
+Theme Name: Sam Smyth
+Description: Sam Smyth WordPress Theme
+Author: Sam Smyth
+Version: 1.0
+*/
+
+@use "sass:math";
+
+// Core
+@import "core/variables";
+@import "core/mixins";
+@import "core/reset";
+@import "core/base";
+@import "core/ie";
+@import "core/tools";
+
+// Layout
+@import "layout/components";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/headings";
+
+// Sections
+@import "sections/contact";
+@import "sections/experience";
+@import "sections/home-banner";
+@import "sections/home-swiper";
+@import "sections/projects";
+@import "sections/skills";

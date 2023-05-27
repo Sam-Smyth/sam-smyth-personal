@@ -1,0 +1,69 @@
+.experience {
+  position: relative;
+}
+
+.experience--block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: $spacing--large 0 $spacing--medium;
+
+  @include breakpoint('tablet') {
+    div:first-child {
+      margin-bottom: $spacing--small;
+    }
+
+    div:last-child {
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  h4 {
+    padding-bottom: $spacing--smallest;
+  }
+
+  h3 {
+    line-height: 3rem;
+    font-size: 2.8rem;
+  }
+}
+
+.experience--connector-wrap {
+  overflow: hidden;
+  flex-grow: 1;
+  margin: 0 20px;
+
+  @include breakpoint('tablet') {
+    display: none;
+  }
+}
+
+.experience--connector {
+  border-bottom: 2px dotted $color--primary;
+  flex-grow: 1;
+  height: 100%;
+  transform: translateX(-110%);
+
+  @include breakpoint('tablet') {
+    display: none;
+  }
+}
+
+.experience--description {
+  padding: 0 $spacing--medium;
+
+  @include breakpoint('tablet') {
+    padding: 0;
+  }
+}
+
+.experience--description-body {
+  max-width: 80%;
+
+  @include breakpoint('tablet') {
+    max-width: 100%;
+  }
+}

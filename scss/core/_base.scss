@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  font-family: $font-family--primary; 
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 10px;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+  color: $color--font;
+  font-family: $font-family--primary;
+  line-height: 1.6;
+  background-color: $color--white;
+  margin-top: 10.2rem;
+
+  &.home {
+    margin-top: 0;
+    overflow-x: hidden;
+  }
+}
+
+*::selection {
+  background-color: rgba($color--secondary, 0.5);
+}
+
+// Custom Scroll Bar
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba($color--primary, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color--overlay;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color--primary, 0.4);
+}
+
+// Reset WP Admin Bar Styles
+html #wpadminbar {
+  @include breakpoint("max-width: 600px") {
+    top: -46px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}

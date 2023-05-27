@@ -1,0 +1,362 @@
+.scroll-block {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  margin: 0 auto;
+  transition: .3s background-color;
+
+  @include breakpoint('tablet') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $spacing--medium;
+  }
+
+  .admin-bar & {
+    top: 32px;
+  }
+
+  .home & {
+    margin: 0;
+    color: $color--white;
+
+    h1 {
+      color: $color--primary;
+      transition: .3s color;
+
+      @include breakpoint('tablet') {
+        color: $color--white;
+      }
+    }
+ 
+
+    &.header-scrolled {
+      background-color: $color--white;
+      color: $color--font;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+      h1 {
+        color: $color--font;
+      }
+    }
+
+    &.header li.header-btn-scrolled {
+      border: 2px solid $color--secondary;
+      background-color: $color--secondary;
+    }
+  }
+
+  a {
+    color: currentColor;
+  }
+}
+
+.header--wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint('tablet') {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+.logo {
+  position: relative;
+  margin: 0 auto 0 0;
+  height: 100%;
+  padding: $spacing--medium 0;
+  font-size: 0;
+  z-index: 1;
+}
+
+.logo--link {
+  font-size: 0; 
+
+  svg {
+    width: 278px;
+    height: 45px;
+    transition: 0.3s fill;
+
+    @include breakpoint('tablet') {
+      transition: 0.3s fill;
+    }
+
+    path {
+      fill: currentColor;
+    }
+
+    @media (max-width: 1350px) {
+      width: 203px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: $spacing--medium 0;
+
+  @include breakpoint("tablet") {
+    padding-top: $spacing--larger;
+    height: 100%;
+    background: $color--primary;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: $transition-duration--long transform;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint("tablet") {
+      position: relative;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    li {
+      margin-left: $spacing--large;
+      cursor: pointer;
+
+      &:last-child {
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0);
+        color: $color--white;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 6px 30px;
+        border-radius: 4rem;
+        transition: .3s color, .3s background-color, .3s border;
+
+        &:hover {
+          background-color: $color--secondary;
+          border: 2px solid $color--secondary;
+
+          & a {
+            color: $color--white;
+          }
+        }
+      }
+
+
+      @media (max-width: 1350px) {
+        margin-left: $spacing--medium;
+      }
+
+      @include breakpoint("tablet") {
+        margin-top: $spacing--small;
+        margin-left: 0;
+      }
+
+      a {
+        position: relative;
+        text-decoration: none;
+        color: currentColor;
+        font-family: $font-family--primary;
+        font-size: 1.9rem;
+        font-weight: 400;
+        outline: 0;
+        transition: .3s color;
+
+        @media (max-width: 1350px) {
+          font-size: $font-size--smallest;
+        }
+
+        @include breakpoint("tablet") {
+          font-size: $font-size--small;
+        }
+
+        &:hover {
+          color: $color--secondary;
+        }
+      }
+    }
+  }
+}
+
+.nav--inner {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint("tablet") {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+}
+
+.nav--container-show .nav {
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.nav--container-show {
+  .nav ul li a {
+    color: $color--white;
+  }
+
+  .nav ul li.current-menu-item a {
+    color: $color--secondary;
+  }
+
+  &.header-scrolled .logo h1 {
+    color: $color--white;
+  }
+
+  svg {
+    color: $color--white;
+    transition: 0.3s;
+  }
+}
+
+.burger--show {
+  color: $color--primary;
+}
+
+.nav--container {
+  @include breakpoint("tablet") {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    pointer-events: none;
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+  z-index: 2;
+  font-size: $font-size--medium;
+
+  @include breakpoint("tablet") {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+  width: 32px;
+  height: 38px;
+  font-size: $font-size--medium;
+  cursor: pointer;
+  z-index: 333;
+
+  @include breakpoint("tablet") {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.burger--condiment {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $color--font;
+  margin-bottom: 6px;
+  position: relative;
+  bottom: -8px;
+  transition: $transition-duration--short $transition-duration--short opacity;
+  transition: $transition-duration--short background-color;
+
+  .nav--container-show &,
+  .home & {
+    background-color: $color--white;
+  }
+
+  .burger--show & {
+    opacity: 0;
+    transition: $transition-duration--short;
+  }
+
+  .header-scrolled & {
+    background-color: $color--font;
+  }
+}
+
+.burger--close-top {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $color--font;
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  margin: 15%;
+  transition: $transition-duration--short;
+
+  .nav--container-show &,
+  .home & {
+    background-color: $color--white;
+  }
+
+  .burger--show & {
+    opacity: 1;
+    transition: $transition-duration--short $transition-duration--short;
+  }
+}
+
+.burger--close-bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $color--font;
+  margin-bottom: 4px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transform-origin: top right;
+  margin: 15%;
+  transition: $transition-duration--short;
+
+  .burger--show & {
+    opacity: 1;
+    transition: $transition-duration--short $transition-duration--short;
+  }
+
+  .nav--container-show &,
+  .home & {
+    background-color: $color--white;
+  }
+}
+
+.menu-item a {
+  position: relative;
+}
+
+.nav img {
+  display: none;
+
+  @include breakpoint("tablet") {
+    display: block;
+
+    &.lazyloadedimage.loaded {
+      opacity: 0.08;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.footer--top {
+  background-color: $color--primary;
+  padding: $spacing--medium 0;
+  font-size: 16px;
+
+  @include breakpoint("tablet") {
+    padding: $spacing--large 0;
+  }
+}
+
+.telephone--link {
+  color: white;
+}
+
+.footer--bottom {
+  background-color: $color--light-grey;
+  padding: $spacing--medium 0;
+  color: $color--font;
+
+  p,
+  a {
+    text-transform: uppercase;
+    color: $color--font;
+    font-size: 12px;
+  }
+
+  @include breakpoint("tablet") {
+    p {
+      margin-top: $spacing--smaller;
+    }
+
+    p,
+    a {
+      font-size: 11px;
+    }
+  }
+}
+
+.footer--bold {
+  font-weight: 500;
+}
+
+.footer--company {
+  letter-spacing: 1px;
+}
+
+.footer--image {
+  position: relative;
+  padding: $spacing--smaller;
+  background-color: $color--white;
+  font-size: 0;
+
+  @include breakpoint("tablet") {
+    display: inline-block;
+  }
+
+  img {
+    position: relative;
+    height: auto;
+  }
+
+  a {
+    font-size: 0;
+  }
+}
+
+.footer {
+  color: white;
+
+  @include breakpoint("tablet") {
+    text-align: center;
+
+    .columns {
+      display: block;
+    }
+  }
+
+  h3 {
+    font-size: 23px;
+    font-family: $font-family--primary;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+  }
+}
+
+.footer--column {
+  margin-right: $spacing--large;
+
+  @include breakpoint("tablet") {
+    margin: $spacing--medium 0;
+
+    &:last-child {
+      margin-bottom: $spacing--large;
+    }
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  svg {
+    margin-right: $spacing--medium;
+
+    @include breakpoint("tablet") {
+      margin: 0 $spacing--small;
+    }
+  }
+}

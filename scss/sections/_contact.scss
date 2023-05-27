@@ -1,0 +1,89 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint('tablet') {
+    justify-content: center;
+  }
+
+  .text-block {
+
+    p {
+      margin-bottom: $spacing--medium;
+    }
+    @include breakpoint('tablet') {
+      order: -1;
+      margin-bottom: $spacing--large;
+    }
+  }
+}
+
+.contact--content {
+  max-width: 51.9rem;
+  width: 100%;
+
+  @include breakpoint("tablet") {
+    width: 100%;
+    margin-bottom: $spacing--large;
+  }
+
+  h2 {
+    font-size: $font-size--medium;
+    line-height: 4.1rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+.contact-form--wrapper {
+  max-width: 50%;
+
+  @include breakpoint('tablet') {
+    max-width: 100%;
+  }
+}
+
+.wpcf7-form {
+  width: 500px;
+
+  @include breakpoint('tablet') {
+    width: auto;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px dotted;
+    resize: none;
+    font-size: 16px;
+    padding: 10px 0 5px;
+  }
+
+  textarea {
+    height: 10rem;
+    margin-bottom: 1rem;
+  }
+
+  input.wpcf7-submit {
+    width: auto;
+    border: 2px solid #20BF55;
+    color: #20BF55;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 16px 40px;
+    font-weight: 500;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: .3s color, .3s background-color;
+
+    &:hover {
+      background-color: #20BF55;
+      color: white;
+    }
+  }
+}

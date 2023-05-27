@@ -1,0 +1,44 @@
+.skills {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint('tablet') {
+    justify-content: center;
+  }
+}
+
+.skills--bar-wrap {
+  margin-bottom: $spacing--small;
+}
+
+.skills--bars {
+  max-width: 450px;
+  width: 100%;
+
+  h3 {
+    font-size: $font-size--small;
+  }
+}
+
+.skills--bar {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  border: 2px solid $color--primary;
+  overflow: hidden;  
+}
+
+.skills--bar-fill {
+  height: 100%;
+  background-color: $color--primary;
+  transform: translateX(-100%);
+}
+
+.skills .text-block {
+  @include breakpoint('tablet') {
+    order: -1;
+  }
+}

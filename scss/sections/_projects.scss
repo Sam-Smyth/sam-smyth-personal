@@ -1,0 +1,267 @@
+.projects {
+  position: relative;
+  
+  @include breakpoint("tablet") {
+    padding: 0;
+
+    .text-block {
+      padding: 0 $spacing--medium;
+    }
+  }
+
+  h2 {
+    margin-bottom: $spacing--large;
+  }
+}
+
+.project-cards {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  height: 500px;
+
+  @include breakpoint("tablet") {
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+.projects-card {
+  position: absolute;
+  width: calc(50% - #{$spacing--medium});
+  min-height: 450px;
+  padding: $spacing--medium;
+  color: $color--white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:last-child {
+    right: 0;
+
+    @include breakpoint("tablet") {
+      margin-top: 50px;
+    }
+  }
+
+  @include breakpoint("tablet") {
+    width: 100%;
+    position: relative;
+    padding: $spacing--large $spacing--medium;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h3 {
+    font-weight: 700;
+    z-index: 1;
+  }
+
+  h4 {
+    margin-bottom: $spacing--medium;
+    color: $color--secondary;
+
+    @include breakpoint("tablet") {
+      color: $color--white;
+    }
+  }
+
+  .curtain-text {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    z-index: 1;
+
+    // pseudo
+
+    --background-color: #333332;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--background-color);
+      transform: translateY(var(--translateY));
+    }
+
+    @include breakpoint("tablet") {
+      height: auto;
+      overflow: visible;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .project-btn {
+    height: 0;
+    visibility: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint("tablet") {
+      height: auto;
+      visibility: visible;
+
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .button {
+    border-color: $color--white;
+    color: $color--white;
+    margin-top: $spacing--medium;
+
+    &:hover {
+      background-color: $color--white;
+      color: $color--secondary;
+    }
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .projects-card-content {
+    z-index: 1;
+    text-align: center;
+
+    .button {
+      @include breakpoint("tablet") {
+        background-color: $color--white;
+        color: $color--secondary;
+      }
+    }
+  }
+
+  .website-link {
+    visibility: hidden;
+    position: absolute;
+    margin-left: 20px;
+    left: 0;
+
+    @include breakpoint("tablet") {
+      margin-left: 0;
+    }
+  }
+
+  .projects-card-video {
+    display: none;
+    z-index: 2;
+    padding-left: 100px;
+    width: 60%;
+
+    @media (max-width: 1500px) and (orientation: landscape) {
+      padding-left: 40px;
+    }
+
+    @include breakpoint("tablet") {
+      overflow: hidden;
+      max-width: 450px;
+      padding: 0;
+      margin-top: 50px;
+      height: 0;
+    }
+
+    @include breakpoint("phone") {
+      width: 80%;
+    }
+
+    video {
+      width: 100%;
+      border: 2px solid $color--white;
+    }
+  }
+
+  .project-text-addition {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &.first-project {
+    @include breakpoint("tablet") {
+      img {
+        object-position: left;
+      }
+    }
+  }
+
+  &.project-expand {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 100%;
+    padding: $spacing--largest;
+
+    @media (max-width: 1500px) and (orientation: landscape) {
+      padding: 0 $spacing--large;
+    }
+
+    @include breakpoint("tablet") {
+      padding: $spacing--medium;
+      width: 100vw;
+      position: relative;
+      z-index: 2;
+    }
+
+    .projects-card-content {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    h4 {
+      @include breakpoint("tablet") {
+        color: $color--secondary;
+      }
+    }
+
+    .website-link {
+      visibility: visible;
+      position: relative;
+      left: auto;
+
+      @include breakpoint('tablet') {
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    .projects-card-video {
+      display: block;
+    }
+
+    .project-btn {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.project-colour-block {
+  position: absolute;
+  background-color: rgba($color--primary, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @include breakpoint("tablet") {
+    background-color: rgba($color--primary, 0.7);
+  }
+}
