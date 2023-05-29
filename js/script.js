@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (box.classList.contains('first-project') && !box.classList.contains('project-expand')) {
 
 
-                  createVideo(window.location.href + "wp-content/uploads/2022/05/Eric-Brunt-Media-Website-Video.mp4")
+                  createVideo(window.location.href + "wp-content/uploads/2023/05/Imagine-Life-Coaching-Website-Video.mp4")
 
                   gsap.to(projectTextAddition, {
                     height: "auto",
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (box.classList.contains('second-project') && !box.classList.contains('project-expand')) {
 
 
-                  createVideo(window.location.href + "wp-content/uploads/2022/05/Staerk-Hair-Website-Project-Highlights.mp4")
+                  createVideo(window.location.href + "wp-content/uploads/2022/05/Eric-Brunt-Media-Website-Video.mp4")
 
                   gsap.to(projectTextAddition, {
                     height: "auto",
@@ -513,7 +513,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (box.classList.contains('first-project') && !box.classList.contains('project-expand')) {
 
-                  createVideo(window.location.href + "wp-content/uploads/2022/05/Eric-Brunt-Media-Website-Mobile-Video.mp4")
+                  createVideo(window.location.href + "wp-content/uploads/2023/05/Imagine-Life-Coaching-Website-Video-Mobile.mp4")
 
                   loadedVid = box.querySelector("video")
 
@@ -554,7 +554,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 } else if (box.classList.contains('second-project') && !box.classList.contains('project-expand')) {
 
-                  createVideo(window.location.href + "wp-content/uploads/2022/05/Staerk-Hair-Website-Mobile-Video.mp4")
+                  createVideo(window.location.href + "wp-content/uploads/2022/05/Eric-Brunt-Media-Website-Mobile-Video.mp4")
 
                   loadedVid = box.querySelector("video")
 
